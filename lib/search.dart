@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:real_estate/constants.dart';
 import 'package:real_estate/data.dart';
+import 'package:real_estate/filter.dart';
 
 class Search extends StatefulWidget {
   @override
@@ -111,13 +111,18 @@ class _SearchState extends State<Search> {
                   ),
                 ),
 
-                Padding(
-                  padding: EdgeInsets.only(left: 16, right: 24),
-                  child: Text(
-                    "Filters",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                GestureDetector(
+                  onTap: (){
+                    _showBottomSheet();
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 16, right: 24),
+                    child: Text(
+                      "Filters",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -390,6 +395,26 @@ class _SearchState extends State<Search> {
           ),
         ),
       ),
+    );
+  }
+
+  void _showBottomSheet(){
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
+        ),
+      ),
+      builder: (BuildContext context){ 
+        return Wrap(
+          children: [
+            Filter(),
+          ],
+        );
+      }
     );
   }
 
