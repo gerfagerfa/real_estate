@@ -9,9 +9,10 @@ class Property {
   String sqm;
   String review;
   String frontImage;
+  String ownerImage;
   List<String> images;
 
-  Property(this.label, this.name, this.price, this.location, this.sqm, this.review, this.frontImage, this.images);
+  Property(this.label, this.name, this.price, this.location, this.sqm, this.review, this.frontImage, this.ownerImage, this.images);
 
 }
 
@@ -25,6 +26,7 @@ List<Property> getPropertyList(){
       "2,456",
       "4.4",
       "assets/images/house_01.jpg",
+      "assets/images/owner.jpg",
       [
         "assets/images/land_rover_0.png",
         "assets/images/land_rover_1.png",
@@ -39,6 +41,7 @@ List<Property> getPropertyList(){
       "2,100",
       "4.1",
       "assets/images/house_02.jpg",
+      "assets/images/owner.jpg",
       [
         "assets/images/land_rover_0.png",
         "assets/images/land_rover_1.png",
@@ -53,6 +56,7 @@ List<Property> getPropertyList(){
       "4,100",
       "4.5",
       "assets/images/house_03.jpg",
+      "assets/images/owner.jpg",
       [
         "assets/images/land_rover_0.png",
         "assets/images/land_rover_1.png",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate/data.dart';
 import 'package:real_estate/filter.dart';
+import 'package:real_estate/detail.dart';
 
 class Search extends StatefulWidget {
   @override
@@ -211,10 +212,10 @@ class _SearchState extends State<Search> {
   Widget buildProperty(Property property, int index){
     return GestureDetector(
       onTap: () {
-        /*Navigator.push(
+        Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => PropertyDetail(property: property)),
-        );*/
+          MaterialPageRoute(builder: (context) => Detail(property: property)),
+        );
       },
       child: Card(
         margin: EdgeInsets.only(bottom: 24),
@@ -274,120 +275,115 @@ class _SearchState extends State<Search> {
                   child: Container(),
                 ),
 
-                Container(
-                  decoration: BoxDecoration(
+                Column(
+                  children: [
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Text(
+                          property.name,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+
+                        Text(
+                          r"$" + property.price,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+
+                      ],
+                    ),
+
+                    SizedBox(
+                      height: 4,
+                    ),
                     
-                  ),
-                  child: Column(
-                    children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
 
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        Row(
+                          children: [
 
-                          Text(
-                            property.name,
-                            style: TextStyle(
+                            Icon(
+                              Icons.location_on,
                               color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                              size: 14,
                             ),
-                          ),
 
-                          Text(
-                            r"$" + property.price,
-                            style: TextStyle(
+                            SizedBox(
+                              width: 4,
+                            ),
+
+                            Text(
+                              property.location,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                              ),
+                            ),
+
+                            SizedBox(
+                              width: 8,
+                            ),
+
+                            Icon(
+                              Icons.zoom_out_map,
                               color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                              size: 16,
                             ),
-                          ),
 
-                        ],
-                      ),
+                            SizedBox(
+                              width: 4,
+                            ),
 
-                      SizedBox(
-                        height: 4,
-                      ),
-                      
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-
-                          Row(
-                            children: [
-
-                              Icon(
-                                Icons.location_on,
+                            Text(
+                              property.sqm + " sq/m",
+                              style: TextStyle(
                                 color: Colors.white,
-                                size: 14,
+                                fontSize: 14,
                               ),
+                            ),
 
-                              SizedBox(
-                                width: 4,
-                              ),
+                          ],
+                        ),
 
-                              Text(
-                                property.location,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                ),
-                              ),
+                        Row(
+                          children: [
 
-                              SizedBox(
-                                width: 8,
-                              ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.yellow[700],
+                              size: 14,
+                            ),
 
-                              Icon(
-                                Icons.zoom_out_map,
+                            SizedBox(
+                              width: 4,
+                            ),
+
+                            Text(
+                              property.review + " Reviews",
+                              style: TextStyle(
                                 color: Colors.white,
-                                size: 16,
+                                fontSize: 14,
                               ),
+                            ),
 
-                              SizedBox(
-                                width: 4,
-                              ),
+                          ],
+                        ),
 
-                              Text(
-                                property.sqm + " sq/m",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                ),
-                              ),
-
-                            ],
-                          ),
-
-                          Row(
-                            children: [
-
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[700],
-                                size: 14,
-                              ),
-
-                              SizedBox(
-                                width: 4,
-                              ),
-
-                              Text(
-                                property.review + " Reviews",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                ),
-                              ),
-
-                            ],
-                          ),
-
-                        ],
-                      ),
-                    ],
-                  ),
+                      ],
+                    ),
+                  ],
                 ),
 
               ],
