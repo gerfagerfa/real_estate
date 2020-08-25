@@ -21,7 +21,7 @@ class _SearchState extends State<Search> {
         children: [
 
           Padding(
-            padding: EdgeInsets.only(top: 36, left: 24, right: 24, bottom: 16),
+            padding: EdgeInsets.only(top: 48, left: 24, right: 24, bottom: 16),
             child: TextField(
               style: TextStyle(
                 fontSize: 28,

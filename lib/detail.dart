@@ -76,6 +76,10 @@ class Detail extends StatelessWidget {
                   ),
                 ),
 
+                Expanded(
+                  child: Container(),
+                ),
+
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
                   child: Container(
@@ -136,7 +140,7 @@ class Detail extends StatelessWidget {
                 ),
 
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                  padding: EdgeInsets.only(left: 24, right: 24, top: 8, bottom: 16,),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
