@@ -43,17 +43,6 @@ class Detail extends StatelessWidget {
             ),
           ),
 
-          /*Container(
-            height: size.height * 0.5,
-            child: Hero(
-              tag: property.frontImage,
-              child: Image.asset(
-                property.frontImage,
-                fit: BoxFit.fitHeight,
-              ),
-            ),
-          ),*/
-
           Container(
             height: size.height * 0.35,
             child: Column(
