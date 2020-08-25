@@ -204,7 +204,12 @@ class _SearchState extends State<Search> {
   List<Widget> buildProperties(){
     List<Widget> list = [];
     for (var i = 0; i < properties.length; i++) {
-      list.add(buildProperty(properties[i], i));
+      list.add(
+        Hero(
+          tag: properties[i].frontImage, 
+          child: buildProperty(properties[i], i)
+        )
+      );
     }
     return list;
   }
