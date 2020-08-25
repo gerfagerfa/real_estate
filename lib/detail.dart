@@ -343,7 +343,7 @@ class Detail extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(right: 24, left: 24, bottom: 24,),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
 
                           buildFeature(Icons.hotel, "3 Bedroom"),
@@ -371,7 +371,7 @@ class Detail extends StatelessWidget {
                       child: Text(
                         property.description,
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           color: Colors.grey[500],
                         ),
                       ),
@@ -429,7 +429,7 @@ class Detail extends StatelessWidget {
           text,
           style: TextStyle(
             color: Colors.grey[500],
-            fontSize: 16,
+            fontSize: 14,
           ),
         ),
 
