@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:real_estate/data.dart';
 
 class Detail extends StatelessWidget {
@@ -151,7 +150,7 @@ class Detail extends StatelessWidget {
                           Icon(
                             Icons.location_on,
                             color: Colors.white,
-                            size: 14,
+                            size: 16,
                           ),
 
                           SizedBox(
@@ -199,7 +198,7 @@ class Detail extends StatelessWidget {
                           Icon(
                             Icons.star,
                             color: Colors.yellow[700],
-                            size: 14,
+                            size: 16,
                           ),
 
                           SizedBox(
@@ -445,12 +444,12 @@ class Detail extends StatelessWidget {
     List<Widget> list = [];
     list.add(SizedBox(width: 24,));
     for (var i = 0; i < images.length; i++) {
-      list.add(buildPhoto(images[i], i));
+      list.add(buildPhoto(images[i]));
     }
     return list;
   }
 
-  Widget buildPhoto(String url, int index){
+  Widget buildPhoto(String url){
     return AspectRatio(
       aspectRatio: 3 / 2,
       child: Container(

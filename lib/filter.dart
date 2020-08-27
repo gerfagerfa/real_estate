@@ -82,8 +82,6 @@ class _FilterState extends State<Filter> {
             max: 1000,
             activeColor: Colors.blue[900],
             inactiveColor: Colors.grey[300],
-            
-            labels: RangeLabels('${selectedRange.start}', '${selectedRange.end}'),
           ),
 
           Row(
