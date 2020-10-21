@@ -31,8 +31,7 @@ class Detail extends StatelessWidget {
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    stops: [0.4, 1.0],
-                    colors: [
+                    List: [
                         Colors.transparent,
                         Colors.black.withOpacity(0.7),
                     ],

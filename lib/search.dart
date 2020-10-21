@@ -97,8 +97,7 @@ class _SearchState extends State<Search> {
                               gradient: LinearGradient(
                                 begin: Alignment.centerRight,
                                 end: Alignment.centerLeft,
-                                stops: [0.0, 1.0],
-                                colors: [
+                                List: [
                                     Theme.of(context).scaffoldBackgroundColor,
                                     Theme.of(context).scaffoldBackgroundColor.withOpacity(0.0),
                                 ],
@@ -244,8 +243,7 @@ class _SearchState extends State<Search> {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                stops: [0.5, 1.0],
-                colors: [
+                List: [
                     Colors.transparent,
                     Colors.black.withOpacity(0.7),
                 ],
